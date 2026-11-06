@@ -27,7 +27,8 @@ def arg(name):
 
 def read(source, rel):
     if source.startswith("https://"):
-        with urllib.request.urlopen(source.rstrip("/") + "/" + rel, timeout=30) as r:
+        req = urllib.request.Request(source.rstrip("/") + "/" + rel, headers={"User-Agent": "no-cows-plugin-generator"})  # Cloudflare refuses Python-urllib
+        with urllib.request.urlopen(req, timeout=30) as r:
             return r.read().decode()
     with open(os.path.join(source, rel)) as f:
         return f.read()
@@ -36,8 +37,10 @@ def read(source, rel):
 def build(source):
     cat = json.loads(read(source, "catalog/tools.json"))
     skill = read(source, "skill/no-cows/SKILL.md")
-    if not skill.startswith("---\nname: no-cows"):
-        sys.exit("generate: the skill does not start with name: no-cows")
+    if not skill.startswith("---\nname: no-cows") or "\nmetadata:\n" not in skill.split("\n---", 1)[0]:
+        sys.exit("generate: the skill does not start with name: no-cows and a metadata block")
+    # stamp the catalog the skill was built against (the conformance probe's plugin_drift check reads it)
+    skill = skill.replace("\nmetadata:\n", f'\nmetadata:\n  catalog_hash: "{cat["catalogHash"]}"\n  server_url: "{cat["server"]}"\n', 1)
     rows = ["<!-- " + GENERATED + " -->", "# no-cows tool catalog", "",
             f"{cat['toolCount']} tools on `{cat['server']}` (catalog `{cat['catalogHash']}`). "
             "The connected server's own tool list always wins over this file.", "",
