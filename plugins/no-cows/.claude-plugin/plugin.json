@@ -1,0 +1,19 @@
+{
+  "name": "no-cows",
+  "version": "1.0.0+f22db815a748",
+  "description": "The no-cows board in Claude: what is next, cards, goals, the Story, Jev's lessons, filing items and working cards end to end, through the no-cows MCP connector. Your admin installs it once; everyone has it.",
+  "author": {
+    "name": "Guten Group",
+    "url": "https://no-cows.com"
+  },
+  "homepage": "https://no-cows.com",
+  "repository": "https://git.no-cows.com/guten-group/no-cows-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "no-cows",
+    "board",
+    "forgejo",
+    "mcp",
+    "agents"
+  ]
+}

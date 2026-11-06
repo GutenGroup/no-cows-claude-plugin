@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "no-cows": {
+      "type": "http",
+      "url": "https://no-cows.com/mcp"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Fails when plugins/no-cows/ differs from what the no-cows MCP kit generates. The kit is read from
+# live https://no-cows.com/mcp-kit (public, no credential): what people actually connect to. Runs on every
+# push/PR and daily, because the server changes without touching this repo.
+# Fix: python3 scripts/generate.py --source https://no-cows.com/mcp-kit, commit.
+name: check-plugin
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '53 9 * * *'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: guten-linux-light
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Plugin matches the live no-cows MCP kit
+        run: python3 scripts/generate.py --source https://no-cows.com/mcp-kit --check
+      - name: Claude validates plugin and marketplace
+        run: |
+          npx -y @anthropic-ai/claude-code@latest plugin validate plugins/no-cows --strict
+          npx -y @anthropic-ai/claude-code@latest plugin validate .
