@@ -3,7 +3,7 @@
 no-cows' Claude plugin. It installs two things:
 
 - the **no-cows connector** (`https://no-cows.com/mcp`), and
-- the **no-cows skill**, which teaches Claude the board's jobs: what is next, reading and moving cards, goals and the Story, Jev's lessons, filing items, and working cards end to end.
+- two skills: **no-cows** (reading the board, goals, the Story, Jev's lessons, filing items, bots working cards) and **no-cows-board-management** (claim, move, comment, label, propose cards, open a pull request).
 
 Each person signs in to no-cows once, the first time Claude uses the connector, and picks the workspace.
 
@@ -16,7 +16,7 @@ Each person signs in to no-cows once, the first time Claude uses the connector, 
 ## Install for yourself (Claude Code)
 
 ```bash
-claude plugin marketplace add https://git.no-cows.com/guten-group/no-cows-claude-plugin.git
+claude plugin marketplace add https://github.com/GutenGroup/no-cows-claude-plugin.git
 ```
 
 ```bash

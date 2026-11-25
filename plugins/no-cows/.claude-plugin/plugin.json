@@ -1,13 +1,13 @@
 {
   "name": "no-cows",
-  "version": "1.0.0+3931bbe8ecc0",
-  "description": "The no-cows board in Claude: what is next, cards, goals, the Story, Jev's lessons, filing items and working cards end to end, through the no-cows MCP connector. Your admin installs it once; everyone has it.",
+  "version": "1.0.0+ff871092b4fa",
+  "description": "The no-cows board in Claude: what is next, cards, goals, the Story, Jev's lessons, filing items, and board management (claim, move, comment, label, propose, open a PR), through the no-cows MCP connector. Your admin installs it once; everyone has it.",
   "author": {
     "name": "Guten Group",
     "url": "https://no-cows.com"
   },
   "homepage": "https://no-cows.com",
-  "repository": "https://git.no-cows.com/guten-group/no-cows-claude-plugin",
+  "repository": "https://github.com/GutenGroup/no-cows-claude-plugin",
   "license": "MIT",
   "keywords": [
     "no-cows",

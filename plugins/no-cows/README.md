@@ -2,3 +2,5 @@
 # no-cows plugin
 
 The no-cows connector (`https://no-cows.com/mcp`) and the no-cows skill. Each person signs in to no-cows once, the first time Claude uses it.
+
+Install: `/plugin install no-cows --marketplace GutenGroup/no-cows-claude-plugin`

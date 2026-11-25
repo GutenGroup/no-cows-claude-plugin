@@ -2,13 +2,13 @@
   "name": "no-cows",
   "owner": { "name": "Guten Group", "url": "https://no-cows.com" },
   "metadata": {
-    "description": "no-cows' Claude plugin: the no-cows MCP connector plus a skill for working the board."
+    "description": "no-cows' Claude plugin: the no-cows MCP connector plus skills for reading and managing the board."
   },
   "plugins": [
     {
       "name": "no-cows",
       "source": "./plugins/no-cows",
-      "description": "The no-cows board in Claude: what is next, cards, goals, filing items and working cards end to end, through the no-cows connector."
+      "description": "The no-cows board in Claude: what is next, cards, goals, filing items and board management (claim, move, comment, label, propose, open a PR), through the no-cows connector."
     }
   ]
 }
