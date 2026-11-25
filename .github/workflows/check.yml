@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 jobs:
   check:
-    runs-on: guten-linux-light
+    runs-on: ubuntu-latest   # public repo: the org runner group refuses public repos by design (self-hosted on public is unsafe), hosted is free
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
