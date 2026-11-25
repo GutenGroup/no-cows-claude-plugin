@@ -1,6 +1,6 @@
 {
   "name": "no-cows",
-  "version": "1.0.0+ff871092b4fa",
+  "version": "1.0.0+e664022d0119",
   "description": "The no-cows board in Claude: what is next, cards, goals, the Story, Jev's lessons, filing items, and board management (claim, move, comment, label, propose, open a PR), through the no-cows MCP connector. Your admin installs it once; everyone has it.",
   "author": {
     "name": "Guten Group",

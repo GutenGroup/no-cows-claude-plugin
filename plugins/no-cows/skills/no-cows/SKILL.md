@@ -2,7 +2,7 @@
 name: no-cows
 description: Work a team's no-cows board (cards over Forgejo issues, ordered by Jev against the Goals) through the no-cows MCP server. Use when the user asks what is next on the board, to find, read, move, lock, claim or release a card, to file a new item, to read or propose goals, the Story or Jev's lessons, or when a coding agent works cards end to end (claim, branch, pull request, release). Skip it when the question is not about a no-cows board.
 metadata:
-  catalog_hash: "ff871092b4fa"
+  catalog_hash: "e664022d0119"
   server_url: "https://no-cows.com/mcp"
   version: "1"
 ---
