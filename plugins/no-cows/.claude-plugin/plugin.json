@@ -7,6 +7,8 @@
     "url": "https://no-cows.com"
   },
   "homepage": "https://no-cows.com",
+  "privacyPolicyUrl": "https://no-cows.com/privacy",
+  "icon": "./.claude-plugin/icon.png",
   "repository": "https://github.com/GutenGroup/no-cows-claude-plugin",
   "license": "MIT",
   "keywords": [

@@ -55,7 +55,8 @@ def build(source):
               "description": "The no-cows board in Claude: what is next, cards, goals, the Story, Jev's lessons, filing "
                              "items, and board management (claim, move, comment, label, propose, open a PR), through the "
                              "no-cows MCP connector. Your admin installs it once; everyone has it.",
-              "author": {"name": "Guten Group", "url": "https://no-cows.com"}, "homepage": "https://no-cows.com",
+              "author": {"name": "Guten Group", "url": "https://no-cows.com"}, "homepage": "https://no-cows.com", "privacyPolicyUrl": "https://no-cows.com/privacy",
+              "icon": "./.claude-plugin/icon.png",
               "repository": "https://github.com/GutenGroup/no-cows-claude-plugin", "license": "MIT",
               "keywords": ["no-cows", "board", "forgejo", "mcp", "agents"]}
     return {
@@ -81,7 +82,7 @@ def main():
             if not os.path.exists(p) or open(p).read() != text:
                 stale.append(rel)
         have = {os.path.relpath(os.path.join(d, f), OUT) for d, _, fs in os.walk(OUT) for f in fs}
-        stale += sorted(f"extra: {x}" for x in have - set(files))
+        stale += sorted(f"extra: {x}" for x in have - set(files) - {".claude-plugin/icon.png"})
         if stale:
             sys.exit("generate: plugins/no-cows is stale: " + ", ".join(stale) + ". Run scripts/generate.py and commit.")
         print("plugin current")
