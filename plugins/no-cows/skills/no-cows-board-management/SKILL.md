@@ -2,7 +2,7 @@
 name: no-cows-board-management
 description: Manage a no-cows board as an AI or a bot: claim a card, move it between Now, Next and Later, comment on it, label it for dispatch, propose cards from a meeting or a decision, and open the pull request for a claimed card. Use when the user or a bot (for example a botreeve bot) asks to take, move, comment on, label or propose cards, or to open a PR for one. Skip it for reading the board only (the no-cows skill covers reads).
 metadata:
-  catalog_hash: "ff871092b4fa"
+  catalog_hash: "e664022d0119"
   server_url: "https://no-cows.com/mcp"
   version: "1"
 ---
